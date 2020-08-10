@@ -1,4 +1,4 @@
-# openrtb [![GoDoc](https://godoc.org/github.com/mxmCherry/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
+# openrtb [![GoDoc](https://godoc.org/github.com/tinkads/openrtb?status.svg)](https://godoc.org/github.com/mxmCherry/openrtb) [![Build Status](https://travis-ci.org/mxmCherry/openrtb.svg?branch=master)](https://travis-ci.org/mxmCherry/openrtb)
 
 [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-project/) [v2.5](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) types for Go programming language (Golang)
 
@@ -11,19 +11,19 @@ Also includes [OpenRTB](https://www.iab.com/guidelines/real-time-bidding-rtb-pro
 
 Go 1.8+ is needed for proper `Ext json.RawMessage` marshaling: non-pointer `json.RawMessage` is marshaled as base64 string prior to Go 1.8.
 
-This library uses `json.RawMessage` since [v10.0.0](https://github.com/mxmCherry/openrtb/releases/tag/v10.0.0).
+This library uses `json.RawMessage` since [v10.0.0](https://github.com/tinkads/openrtb/releases/tag/v10.0.0).
 
 # Using
 
 ```bash
-go get -u "github.com/mxmCherry/openrtb"
+go get -u "github.com/tinkads/openrtb"
 ```
 
 ```go
-import "github.com/mxmCherry/openrtb"
+import "github.com/tinkads/openrtb"
 ```
 
-This repo follows [semver](http://semver.org/) - see [releases](https://github.com/mxmCherry/openrtb/releases).
+This repo follows [semver](http://semver.org/) - see [releases](https://github.com/tinkads/openrtb/releases).
 Master always contains latest code, so better use some package manager to vendor specific version.
 
 # Guidelines
@@ -56,7 +56,7 @@ Pointer | Omitempty | When to use                                               
 
 Using both pointer and `omitempty` is mostly just to save traffic / generate more "canonical" (strict) JSON.
 
-## Documentation ([godoc](https://godoc.org/github.com/mxmCherry/openrtb))
+## Documentation ([godoc](https://godoc.org/github.com/tinkads/openrtb))
 - [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
 - Each entity (type, struct key or constant) should be documented
 - Comments for entities should be copy-pasted "as-is" from OpenRTB specification (except section 5 - replace "table" with "list" there; ideally, each sentence must be on a new line)
