@@ -2,6 +2,8 @@ package openrtb
 
 import "encoding/json"
 
+import np "github.com/mxmCherry/openrtb/native/response"
+
 // 4.2.3 Object: Bid
 //
 // A SeatBid object contains one or more Bid objects, each of which relates to a specific impression in the bid request via the impid attribute and constitutes an offer to buy that impression for a given price.
@@ -276,4 +278,21 @@ type Bid struct {
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB
 	Ext json.RawMessage `json:"ext,omitempty"`
+
+	// tinkads customized
+	CPC       float64      `json:"cpc,omitempty"`
+	AdMNative *np.Response `json:"admnative,omitempty"`
+	AdMBanner *AdMBanner   `json:"admbanner,omitempty"`
+}
+
+// tinkads customized
+type AdMBanner struct {
+	ImgSrc        string   `json:"img,omitempty"`
+	DestUrl       string   `json:"desturl,omitempty"`
+	IfmUrl        string   `json:"iframeurl,omitempty"`
+	SlotID        string   `json:"slotid,omitempty"`
+	Html          string   `json:"html,omitempty"`
+	Text          string   `json:"text,omitempty"`
+	ClickTrackers []string `json:"clicktrackers,omitempty"`
+	ImpTrackers   []string `json:"imptrackers,omitempty"`
 }

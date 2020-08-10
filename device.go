@@ -274,4 +274,10 @@ type Device struct {
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
 	Ext json.RawMessage `json:"ext,omitempty"`
+
+	// tinkads customized
+	DPID string `json:"dpid,omitempty"`
+	DID  string `json:"did,omitempty"`
+	MAC  string `json:"mac,omitempty"`
+	IMSI string `json:"imsi,omitempty"`
 }

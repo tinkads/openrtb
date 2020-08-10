@@ -1,5 +1,7 @@
 package openrtb
 
+import nq "github.com/mxmCherry/openrtb/native/request"
+
 import "encoding/json"
 
 // 3.2.9 Object: Native
@@ -24,7 +26,7 @@ type Native struct {
 	//   string; required
 	// Description:
 	//   Request payload complying with the Native Ad Specification.
-	Request string `json:"request"`
+	Request string `json:"request,omitempty"`
 
 	// Attribute:
 	//   ver
@@ -60,4 +62,7 @@ type Native struct {
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
 	Ext json.RawMessage `json:"ext,omitempty"`
+
+	// tinkads customized
+	RequestNative *nq.Request `json:"requestnative,omitempty"`
 }
