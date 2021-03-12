@@ -2,7 +2,7 @@ package openrtb
 
 import "encoding/json"
 
-import np "github.com/tinkads/openrtb/native/response"
+import np "github.com/tinkads/openrtb/v11/native/response"
 
 // 4.2.3 Object: Bid
 //

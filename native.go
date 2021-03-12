@@ -1,6 +1,6 @@
 package openrtb
 
-import nq "github.com/tinkads/openrtb/native/request"
+import nq "github.com/tinkads/openrtb/v11/native/request"
 
 import "encoding/json"
 

@@ -3,7 +3,7 @@ package response
 import (
 	"encoding/json"
 
-	"github.com/tinkads/openrtb/native"
+	"github.com/tinkads/openrtb/v11/native"
 )
 
 // 5.4 Object: Image

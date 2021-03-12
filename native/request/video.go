@@ -3,7 +3,7 @@ package request
 import (
 	"encoding/json"
 
-	"github.com/tinkads/openrtb/native"
+	"github.com/tinkads/openrtb/v11/native"
 )
 
 // 4.5 Video Object
